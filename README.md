@@ -2,10 +2,10 @@
 ## Sistem za rezervaciju i kupovinu avionske karte
 Članovi tima:
 
-1.Azemina Ahmedhodžić
-2.Elvis Kundo
-3.Ahmed Ahmedić
-4.Amina Alijagić
+1.Azemina Ahmedhodžić  
+2.Elvis Kundo  
+3.Ahmed Ahmedić  
+4.Amina Alijagić  
 
 ### Opis Teme:
 
