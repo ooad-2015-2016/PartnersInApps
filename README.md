@@ -45,7 +45,7 @@ Cilj je da se pronađe najbolje rješenje za proces kupovine i rezervacije mjest
 ### Funkcionalnosti:
 
 Desktop aplikacija za aerodrom:
--	Modul za unos željene destinacije
+-	Modul za unos željene destinacije 
 -	Modul za odabir tipa karte: povratna ili u jednom smjeru
 -	Modul za odabir datuma i termina letenja
 -	Modul za odabir klase
