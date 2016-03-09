@@ -14,33 +14,33 @@ Cilj je da se pronađe najbolje rješenje za proces kupovine i rezervacije mjest
 
 ### Procesi:
 
- Pristupa se kupovini karte, lično ili putem interneta. **(Putnik -> Službenik)**
+ Pristupa se kupovini karte, lično ili putem interneta. **(Putnik -> Službenik)**  
  Bira se destinacija, tip karte (povratna ili u jednom pravcu), i datum leta (i povratka u slučaju povratne karte). 
-**(Putnik -> Službenik)**
- Procesuiranje zahtjeva, provjerava se da li ima slobodnih letova, i prikazuju se termini za slobodne letove (i termine povratka u  slučaju povratne karte). **(Službenik -> Putnik)**
- Bira se termin leta. **(Putnik -> Službenik)**
- Provjerava se da li je let popunjen.  **(Službenik -> Putnik)**
- Ako jeste, bira se ponovo termin leta. **(Putnik -> Službenik)**
- Ako nije, bira se klasa (ako je dostupna u avionu) i sjedište. Unose se lični podaci putnika (ime i prezime, datum rođenja, JMBG, broj telefona, email, broj pasoša/vize...). **(Putnik -> Službenik)**
- Provjerava se ispravnost pasoša/vize i ostalih ličnih podataka. **(Službenik -> Supervizor)**
- Ukoliko su podaci neispravni, šalje se zahtjev putniku da ispravi greške. **(Službenik -> Putnik)**
+**(Putnik -> Službenik)**  
+ Procesuiranje zahtjeva, provjerava se da li ima slobodnih letova, i prikazuju se termini za slobodne letove (i termine povratka u  slučaju povratne karte). **(Službenik -> Putnik)**  
+ Bira se termin leta. **(Putnik -> Službenik)**  
+ Provjerava se da li je let popunjen.  **(Službenik -> Putnik)**  
+ Ako jeste, bira se ponovo termin leta. **(Putnik -> Službenik)**  
+ Ako nije, bira se klasa (ako je dostupna u avionu) i sjedište. Unose se lični podaci putnika (ime i prezime, datum rođenja, JMBG, broj telefona, email, broj pasoša/vize...). **(Putnik -> Službenik)**  
+ Provjerava se ispravnost pasoša/vize i ostalih ličnih podataka. **(Službenik -> Supervizor)**  
+ Ukoliko su podaci neispravni, šalje se zahtjev putniku da ispravi greške. **(Službenik -> Putnik)**  
  Ukoliko se utvrdi da se radi o sumnjivom licu, aktivira se tihi alarm koji poziva osiguranje. 
-**(Sistem -> Službenik, Osiguranje)**
- Ako su podaci ispravni, nudi se i dodatna opcija automatskog iznajmljivanja automobila na odredištu ili mogućnost da putnika na aerodromu dočeka osoblje iz rezervisanog hotela. **(Službenik -> Putnik)**
- Ako putnik odabere neku od opcija, hotelu/rent-a-car agenciji se šalju podaci o putniku. **(Sistem -> Sistem hotela/rent-a-car agencije)**
- Nude se dva načina plaćanja: gotovinsko ili kreditnom karticom. Obračunavaju se popusti zavisno od vremena rezervacije, i ukoliko putnik posjeduje Membership karticu (tj. ako putnik često koristi usluge ove kompanije). **(Službenik -> Putnik)**
- Bira se način plaćanja. Ukoliko se plaćanje vrši kreditnom karticom, putnik daje broj kreditne kartice (ili karticu ako kartu kupuje na aerodromu). **(Putnik -> Službenik)**
- Ako putnik plaća preko interneta, na email se šalje ugovor koji je potrebno priložiti prilikom preuzimanja karte. **(Službenik -> Putnik)**
- Osim kupovine, postoji i mogućnost izmjene leta. U odgovarajuće polje upisuje se serijski broj karte i putnik bira da li želi promijeniti termin leta ili otkazati let. **(Putnik -> Službenik)**
- Procesuira se zahtjev za promjenu karte. **(Supervizor -> Putnik)**
- Ukoliko je odobrena promjena termina, određuje se iznos doplate za istu. **(Supervizor -> Putnik)** 
- Ukoliko nije odobrena promjena (zbog popunjenosti leta), bira se novi termin.  **(Putnik -> Supervizor)**
- Ako putnik otkazuje rezervisani let, vraća mu se samo dio novca. **(Supervizor -> Putnik)**
+**(Sistem -> Službenik, Osiguranje)**  
+ Ako su podaci ispravni, nudi se i dodatna opcija automatskog iznajmljivanja automobila na odredištu ili mogućnost da putnika na aerodromu dočeka osoblje iz rezervisanog hotela. **(Službenik -> Putnik)**  
+ Ako putnik odabere neku od opcija, hotelu/rent-a-car agenciji se šalju podaci o putniku. **(Sistem -> Sistem hotela/rent-a-car agencije)**  
+ Nude se dva načina plaćanja: gotovinsko ili kreditnom karticom. Obračunavaju se popusti zavisno od vremena rezervacije, i ukoliko putnik posjeduje Membership karticu (tj. ako putnik često koristi usluge ove kompanije). **(Službenik -> Putnik)**  
+ Bira se način plaćanja. Ukoliko se plaćanje vrši kreditnom karticom, putnik daje broj kreditne kartice (ili karticu ako kartu kupuje na aerodromu). **(Putnik -> Službenik)**  
+ Ako putnik plaća preko interneta, na email se šalje ugovor koji je potrebno priložiti prilikom preuzimanja karte. **(Službenik -> Putnik)**  
+ Osim kupovine, postoji i mogućnost izmjene leta. U odgovarajuće polje upisuje se serijski broj karte i putnik bira da li želi promijeniti termin leta ili otkazati let. **(Putnik -> Službenik)**  
+ Procesuira se zahtjev za promjenu karte. **(Supervizor -> Putnik)**  
+ Ukoliko je odobrena promjena termina, određuje se iznos doplate za istu. **(Supervizor -> Putnik)**   
+ Ukoliko nije odobrena promjena (zbog popunjenosti leta), bira se novi termin.  **(Putnik -> Supervizor)**  
+ Ako putnik otkazuje rezervisani let, vraća mu se samo dio novca. **(Supervizor -> Putnik)**  
 
- Prije polijetanja, vrši se kontrola prtljaga. **(Osiguranje -> Putnik)**
- Ako je prtljag teži od dozvoljenog, potrebna je doplata. **(Putnik -> Službenik)**
- Ukoliko se u prtljagu nalazi sumnjivi predmet (npr. oružje), putnik se izdvaja zbog ispitivanja. **(Osiguranje -> Putnik)**
- Ukoliko se u prtljagu nalazi predmet koji nije dozvoljeno unijeti u avion, isti se oduzima. **(Osiguranje -> Putnik)**
+ Prije polijetanja, vrši se kontrola prtljaga. **(Osiguranje -> Putnik)**  
+ Ako je prtljag teži od dozvoljenog, potrebna je doplata. **(Putnik -> Službenik)**  
+ Ukoliko se u prtljagu nalazi sumnjivi predmet (npr. oružje), putnik se izdvaja zbog ispitivanja. **(Osiguranje -> Putnik)**  
+ Ukoliko se u prtljagu nalazi predmet koji nije dozvoljeno unijeti u avion, isti se oduzima. **(Osiguranje -> Putnik)**  
 
 ### Funkcionalnosti:
 
@@ -63,8 +63,8 @@ Desktop aplikacija za aerodrom:
 
 ### Akteri:
 
- **Putnik** – osoba koja predaje zahtjev za avionsku kartu.
- **Službenik** - osoba koja je u komunikaciji s putnicima i daje sve informacije vezane za let.
- **Supervizor** –osoba koja provjerava ispravnost ličnih podatke putnika i odobrava zahtjev za izmjenu karte.
- **Osiguranje** – osoba koja privodi sumnjivo lice i putnike koji posjeduju nedozvoljene predmete u prtljagu.
+ **Putnik** – osoba koja predaje zahtjev za avionsku kartu.  
+ **Službenik** - osoba koja je u komunikaciji s putnicima i daje sve informacije vezane za let.  
+ **Supervizor** –osoba koja provjerava ispravnost ličnih podatke putnika i odobrava zahtjev za izmjenu karte.  
+ **Osiguranje** – osoba koja privodi sumnjivo lice i putnike koji posjeduju nedozvoljene predmete u prtljagu.  
 
