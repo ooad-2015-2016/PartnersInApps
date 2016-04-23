@@ -1,0 +1,49 @@
+SOLID principi:
+
+
+1. Princip pojedinaène odgovornosti (KLASA BI TREBALA IMATI SAMO JEDAN RAZLOG ZA PROMJENU).
+
+Svaka klasa u dijagramu zadovoljava navedeni pricip, jer svaka od njih vodi raèuna samo o jednoj stvari i znaju
+sve informacije vezane za obavljanje jedine odgovornosti koja im je dodjeljena. Kao na primjer klasa Kupac sadrži sve
+operacije i informacije koje su opšte za kupca karte. Takoðer kao primjer možemo uzeti klasu PodaciODestinaciji
+koja sadrži informacije tipa destinacine koja nam govori o destinaciji koju je kupac izabrao ili tipKarte koju
+kupac izabrao i tako dalje.
+
+
+2. Otvoreno zatvoren princip (ENTITETI SOFTVERA (KLASE, MODULI, FUNKCIJE) TREBALI BI BITI OTVORENI ZA
+NADOGRADNJU, ALI ZATVORENI ZA MODIFIKACIJE).
+
+Navedeni princip u dijagramu je prekršen, jer svaka od njih je nije otvorena za nadogradnju bez promjene
+te iste klase. Uzmimo za primjer u dijagramu prvo klasu koja zadovoljava princip pa onda koja ne zadovoljava da 
+primjetimo razliku. Klasa kupac zadovoljava princip jer ona sadrži osnovne operacije koji mora imati svaki kupac,
+ako želimo da modificiramo klasu kupac naslijedimo je i dodamo nove stvari koje zelimo da ima klasa kupac.
+Kod klase Avion, ako je želimo nadograditi moramo mijenjati tu klasu jer na primjer putnici mogu putovati na kraæe
+relacije drugim prevoznim sredstvom kao što je helikopter, a mi ne možemo nju realizovati preko klase Avion jer to
+nema smisla. Zato æemo napraviti klasu PrevoznoSredstvo koja æe imati osnovne operacije i argumente koje moraju 
+imati i klasa Avion i klasa Helikopter.
+
+
+3. Liskov princip zamjene (PODTIPOVI MORAJU BITI ZAMJENJIVI NJIHOVIM OSNOVNIM TIPOVIMA).
+
+U dijagramu klase navedeni princip je zadovoljen a jedini primjer je klasa Kupac. Svaka klasa koja naslijeðuje
+klasu Kupac je zamijeniva sa istom tom klasom, jer su InternetKupac i ObicniKupac neki kupci i obje klase moraju
+imati osnovne operacije i argumente koje su navede u klasi kupac sa nekim dodacima.
+
+
+4. Princip inverzije ovisnosti (A. MODULI VISOKOG NIVOA NE BI TREBALI OVISITI OD MODULA NISKOG NIVOA.
+OBA BI TREBALO DA OVISE OD APSTRAKCIJA.
+B. MODULI NE BI TREBALI OVISITI OD DETALJA. DETALJI BI TREBALI BITI OVISNI OD
+APSTRAKCIJA)
+
+Navedeni princip je prekršen kod klase Kupac i kod klase Zahtjev, jer promjene nekih osnovih operacija klasa 
+može uticati na sistem rada. Takoðer ako se neke metode mogu implementirati na više naèina, bolje je staviti te
+metode kao apstraktne odnosno tu samu klasu apstraktnom. Za primjer možemo uzeti metode unosa podataka o kupcu
+koje mogu biti implementirane na razlièite naèine u zavisnosti od tipa kupca.
+
+
+5. Princip izoliranja interfejsa (KLIJENTI NE TREBA DA OVISE O METODAMA KOJE NEÆE UPOTREBLJAVAT)
+
+Ovaj princip za posmatrani dijagram klasa je zadovoljen jer je svaki interfejs izveden tako da ima svoju ulogu, 
+odnosno korisnici kad pristupaju interfejsu su ograniceni sa metodama koji su im potrebni za sprovoðenje
+odreðenog cilja. Na primjer InterfejsZaPlacanje daje korisniku mogucnost prikaza, kao što i sam naziv govori, da
+pristupa samo metodama vezane za placanje. Tako i za svaki interfejs na dijagramu.
