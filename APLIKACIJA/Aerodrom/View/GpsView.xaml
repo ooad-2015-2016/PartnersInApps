@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Aerodrom.View.GpsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aerodrom.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Help" Label="Help" Background="DarkBlue" Foreground="White" Click="click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid>
+        <Grid.Background>
+        <ImageBrush ImageSource= "Slike/Lokacija.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textblock" Text="{Binding Lokacija}" Grid.Row="1" />
+        <TextBlock x:Name="textblock1" Text="{Binding Adresa}"  Grid.Row="2"/>
+            <!--Bez oneway binding ne radi, ne zaboraviti ukljuciti maps gore-->
+            <maps:MapControl x:Name="mapa" Grid.Row="3" Center="{Binding TrenutnaLokacija, Mode=OneWay}" />
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Vasa trenutna lokacija: " VerticalAlignment="Center" FontSize="25" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left"  Grid.Row="4" TextWrapping="Wrap" Text="Potvrdi lokaciju i završi:" VerticalAlignment="Center" FontSize="15" />
+        <Button x:Name="button" Content="Završi" HorizontalAlignment="Right" Grid.Row="4" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="3" Command="{Binding Path=Dalje}" Click="button_Click_1" />
+        <TextBlock x:Name="textBlock15" Grid.Column="1" HorizontalAlignment="Left" Width="0" Height="0" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Path=Br,Mode=TwoWay}" VerticalAlignment="Top"/>
+    </Grid>
+    </Page>
+

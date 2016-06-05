@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Aerodrom.View.KreniNaLetView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aerodrom.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Help" Label="Help" Background="DarkBlue" Foreground="White" Click="click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource= "Slike/traveling.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Stretch"  Grid.Row="1" TextWrapping="Wrap" Text="Provucite karticu ili unesite broj karte leta!" VerticalAlignment="Top" FontSize="25" FontWeight="ExtraBold" />
+        <TextBox x:Name="textBox" HorizontalAlignment="Stretch"  Grid.Row="2" TextWrapping="Wrap" Text="{Binding Path=RfidKartica,Mode=TwoWay}" VerticalAlignment="Bottom" />
+        <Button x:Name="button" Content="Putuj" HorizontalAlignment="Stretch"  Grid.Row="3" VerticalAlignment="Center" Command="{Binding Path=Dalje}" Click="click1"/>
+        <TextBlock x:Name="textBlock15" Grid.Column="1" HorizontalAlignment="Left" Width="0" Height="0" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Path=Br,Mode=TwoWay}" VerticalAlignment="Center"/>
+    </Grid>
+</Page>
