@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="Aerodrom.Povratna_avio_karta"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aerodrom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:Aerodrom.Converter"
+      xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Help" Label="Help" Background="DarkBlue" Foreground="White" Click="click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Page.Resources>
+        <converter:DateConverter x:Key="DateConverter"/>
+    </Page.Resources>
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource= "Slike/Avion2.jpg"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <maps:MapControl x:Name="mapa" Grid.Row="5" Center="{Binding TrenutnaLokacija, Mode=OneWay}" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Stretch" Margin="3,3,3,0" TextWrapping="Wrap" Text="Povratna avio karta" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Stretch" Grid.Row="2" TextWrapping="Wrap" Text="Polazak->Destinacija:" VerticalAlignment="Center" FontSize="20" Grid.ColumnSpan="1" Margin="0,3,9.333,2" />
+        <ComboBox   HorizontalAlignment="Left"
+                    VerticalAlignment="Top" ItemsSource="{Binding Path=destinacija.Destinacije}" 
+                    DisplayMemberPath="PolazakIOdrediste" SelectedValue="{Binding Path=Parent.Zahtjev.LetDestinacija,Mode=TwoWay}"
+                    Grid.Row="2" Grid.Column="1" Grid.RowSpan="1" Margin="0,0,0,0"
+        />
+        <ItemsControl  x:Name="ErrorList"
+              ItemsSource="{Binding Error}" Grid.Row="14"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Stretch" Grid.Row="7" TextWrapping="Wrap" Text="Datum Polaska:" VerticalAlignment="Top" FontSize="20" />
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Stretch" Grid.Row="10" TextWrapping="Wrap" Text="Datum Dolaska:" VerticalAlignment="Top" FontSize="20"/>
+        <DatePicker Date="{Binding Path=DatumLeta, Mode=TwoWay, Converter={StaticResource DateConverter}}" HorizontalAlignment="Stretch" Grid.Row="8" VerticalAlignment="Top" Grid.ColumnSpan="2"  Margin="0,0,0,0" />
+        <DatePicker Date="{Binding Path=DatumPovratka, Mode=TwoWay, Converter={StaticResource DateConverter}}" HorizontalAlignment="Stretch" Grid.Row="11" VerticalAlignment="Top" Grid.ColumnSpan="2"  Margin="0,0,0,0"/>
+        <Button x:Name="button" Content="Dalje ->" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="13" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="3" FontSize="20" Command="{Binding Path=Dalje}" />
+       
+    </Grid>
+</Page>
+

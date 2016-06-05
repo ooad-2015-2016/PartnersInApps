@@ -1,0 +1,15 @@
+﻿-Main page-
+Da biste rezervisali kartu u jednom smjeru, odaberite opciju U jednom pravcu.Da biste rezervisali povratnu kartu, odaberite opciju Povratna karta.
+-Karta u jednom pravcu i Povratna avio karta-
+Iz padajuće liste odaberite destinaciju svog putovanja.Na mapi možete vidjeti najkraću pravolinijsku udaljenost između Vas i Vašeg odredišta.Datum koji odaberete isključivo mora biti u budućnosti. Ukoliko odaberete datum u prošlosti, aplikacija će Vam ispisati upozorenje i nećete moći nastaviti sa rezervacijom.
+-Odabir prevoznog sredstva-
+Iz padajuće liste odaberite prevozno sredstvo kojim želite putovati.Nakon toga, imate ponuđena sjedišta u izabranom prevoznom sredstvu, izaberite željeno.Ukoliko Vam se ispiše poruka 'Mjesto je zauzeto', trebate izabrati drugo mjesto.
+-Popunjavanje podataka o kupcu-
+U naznačena polja unesite lične podatke i ostavite svoju sliku radi lakše identifikacije.Ukoliko ne unesete svoje podatke, aplikacija će Vam dati upozorenje.Podatke u polja unesite u tačno određenom formatu, u protivnom, aplikacija Vam neće dozvoliti da nastavite sa rezervacijom.
+Ukoliko posjedujete Membership karticu, prvo to naznačite u za to predviđenom kvadratiću, a zatim će Vam se otvoriti opcija unosa broja kartice.
+-Vaša trenutna lokacija-
+Da bi rezervacija bila uspješna, potrebno je da aplikacija locira vašu trenutnu lokaciju iz sigurnosnih razloga.
+-Izmjeni-
+Ukoliko imate već rezervisanu kartu, ali želite je izmjeniti, to možete izvršiti jednostavnim pritiskom na tipku Izmjeni.
+-Kreni-
+Aplikacija će Vam ponuditi polje za unos broja karte ručno ili provlačenjem karte kroz uređaj za očitanje.
