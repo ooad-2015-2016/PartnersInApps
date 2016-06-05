@@ -68,3 +68,15 @@ Desktop aplikacija za aerodrom:
  **Supervizor** –osoba koja provjerava ispravnost ličnih podatke putnika i odobrava zahtjev za izmjenu karte.  
  **Osiguranje** – osoba koja privodi sumnjivo lice i putnike koji posjeduju nedozvoljene predmete u prtljagu.  
 
+###Eksterni uređaji:
+1. Čitač kartica
+https://github.com/ooad-2015-2016/PartnersInApps/blob/master/APLIKACIJA/Aerodrom/View%20models/PutovanjeViewModel.cs
+
+2. Kamera
+https://github.com/ooad-2015-2016/PartnersInApps/blob/master/APLIKACIJA/Aerodrom/View%20models/PopunjavanjeLicnihPodatakaViewModel.cs
+
+###Validacija
+https://github.com/ooad-2015-2016/PartnersInApps/blob/master/APLIKACIJA/Aerodrom/Models/Kupac.cs
+
+###Prilagodjavanje windows phone - GPS
+https://github.com/ooad-2015-2016/PartnersInApps/tree/master/APLIKACIJA/Aerodrom/View%20models/GPSViewModel
