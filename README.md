@@ -80,3 +80,6 @@ https://github.com/ooad-2015-2016/PartnersInApps/blob/master/APLIKACIJA/Aerodrom
 
 ###Prilagodjavanje windows phone - GPS
 https://github.com/ooad-2015-2016/PartnersInApps/tree/master/APLIKACIJA/Aerodrom/View%20models/GPSViewModel
+
+### Video aplikacije
+https://www.dropbox.com/s/h2cb4adsoay0eje/VideoAplikacije.avi?dl=0
